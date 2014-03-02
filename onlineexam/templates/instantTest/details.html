@@ -1,0 +1,21 @@
+<head>
+<meta http-equiv="Expires" CONTENT="0">  
+<meta http-equiv="Cache-Control" CONTENT="no-cache">  
+<meta http-equiv="Pragma" CONTENT="no-cache">  
+<meta http-equiv = "refresh" content ="5;url=/instantTest/{{test.id}}/{{next_id}}/" >
+</head>
+
+{% if question.question %}
+   <h1> {{question.question}}</h1>
+   <h2> grade is {{test.grade}}</h2>
+   <form action="/instantTest/{{test.id}}/{{question_id}}/" method="post">
+   {% csrf_token %}
+
+   {% for choice in question.choice_set.all %}
+
+      <input type = "radio" name ="choice" id ="choice{{forloop.counter}}" value="{{forloop.counter}}"/>
+      <label for="choice{{forloop.counter}}">{{choice.choice}}</label><br/>
+   {% endfor %}
+<input type ="submit" value="submit" />
+</form>
+{% endif %}
