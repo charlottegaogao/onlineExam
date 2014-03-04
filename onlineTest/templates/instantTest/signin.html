@@ -1,0 +1,8 @@
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="/instantTest/myTest" method="get">
+{% csrf_token %}
+ 测试码<input type = "text" name = "paperid" /></br>
+ 用户名<input type = "text" name = "username"/></br>
+ 密码<input type = "text" name = "password"/></br>
+ <input type ="submit" value="begin test" />
+</form>

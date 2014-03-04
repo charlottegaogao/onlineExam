@@ -9,6 +9,7 @@ class Point(models.Model):
 
         
 class Question(models.Model):
+<<<<<<< HEAD
     # int
     choice1 = 0
     choice2 = 1
@@ -23,6 +24,11 @@ class Question(models.Model):
     question = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     answer = models.IntegerField(default=0, choices=ANSWER_CHOICE)
+=======
+    question = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+    answer = models.IntegerField(default=0)
+>>>>>>> master
     point = models.ManyToManyField(Point)
     def __unicode__(self):
         return self.question
@@ -34,7 +40,11 @@ class Choice(models.Model):
     question = models.ForeignKey(Question)
     choice = models.CharField(max_length = 200)
     def __unicode__(self):
+<<<<<<< HEAD
         return self.choice
+=======
+       return self.choice
+>>>>>>> master
 
 class Paper(models.Model):
     questions = models.ManyToManyField(Question)
@@ -52,3 +62,9 @@ class Test(models.Model):
     #dueDate =models.DateTimeField('date overdue')
     def __unicode__(self):
         return self.paper.name
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> master
