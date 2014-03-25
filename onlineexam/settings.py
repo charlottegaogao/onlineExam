@@ -1,5 +1,4 @@
-# Django settings for onlineexam project.
-import os.path
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -30,11 +29,11 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'zh-CN'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -84,7 +83,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '&s(o%890-!h$4o^vgfy!z#q&z)lj=rzt4%+=o)zb^*(nwffxt)'
+SECRET_KEY = '8ge58%d0$i5k-w#2obv1iklpbw9407rnc$2ydv2l^*g_%l+fx1'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -103,15 +102,12 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'onlineexam.urls'
+ROOT_URLCONF = 'OnlineExam.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'onlineexam.wsgi.application'
+WSGI_APPLICATION = 'OnlineExam.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(os.path.dirname(__file__),'templates').replace('\\','/'),
 )
 

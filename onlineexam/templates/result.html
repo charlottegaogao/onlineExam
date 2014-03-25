@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+ <html>
+ 	<head>
+ 		<meta charset="utf-8">
+ 		<title>result</title>
+	</head>
+ 	<body>
+		{% if error %}
+		<p>{{error}}</p>
+		{% endif %}
+		
+		{% if result %}
+			{% for r in result %}
+		    <li>{{r}}</li>
+			{% endfor %}
+			<p>save successfully£¡</p>
+		{% endif %}
+ 	</body>
+ </html>
